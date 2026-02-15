@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Gonzalgo Richlynn-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richlynn Gonzalgo</title>
+
+    <script>
+        // Detect if running locally (Live Server usually uses localhost or 127.0.0.1)
+        if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+            // Remove any <base> tag so relative paths work locally
+            document.querySelector("base")?.remove();
+        } else {
+            // Add <base> tag for GitHub Pages deployment
+            const base = document.createElement("base");
+            base.href = "/portfolio/";
+            document.head.appendChild(base);
+        }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./resources/style.css">
+
+    <link rel="icon" type="image/x-icon" href="./assets/logo3_inverted.png">
+    
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <a class="logo" href="#">
+                <img src="./assets/abstract_r.png" class="wh-ico" width="36px" height="36px" alt="">
+            </a>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <span class="nav-underline" aria-hidden="true"></span>
+            </div>
+            <div class="nav-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                    <img src="./assets/toggle-left.svg" alt="Dark mode toggle" class="toggle-icon" id="toggleIcon">
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-content">
+            <button class="close-menu" id="close-menu" aria-label="Close navigation">
+                <i class="uil uil-times"></i>
+            </button>
+            <nav class="mobile-nav">
+                <a href="#home" class="mobile-nav-link">HOME</a>
+                <a href="#about" class="mobile-nav-link">ABOUT</a>
+                <a href="#projects" class="mobile-nav-link">PROJECTS</a>
+                <a href="#contact" class="mobile-nav-link">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="showcase-area min-h-screen flex items-center justify-center py-32 px-12 mt-16 overflow-hidden" id="home" style="background-color: var(--bg-color);">
+            <div class="container flex flex-col justify-center items-center text-center w-full max-w-full">
+                <div class="showcase-info w-auto flex flex-col items-start">
+                    <h3 class="sub-heading text-left text-base italic mb-3 animate-slideInDown" style="border: none; padding: 0;">Hello there, I'm</h3>
+                    <h1 class="heading font-bold flex flex-col items-start my-4 animate-slideInUp" style="font-size: clamp(4rem, 12vw, 9rem); line-height: 0.9;">
+                        <span class="first-name block text-left mt-2 mb-6">Richlynn</span>
+                        <span class="last-name block text-left" style="margin-left: 8%;">Gonzalgo</span>
+                    </h1>
+                    <div class="cta w-full flex items-center justify-center animate-slideInUpDelay" style="margin-top: 10.5rem;">
+                        <a href="#contact" class="btn inline-block px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-110" style="background-color: var(--main-color-1); color: var(--bg-color);">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="about-info">
+                    <h3 class="sub-heading">About Me</h3>
+                    <h1 class="heading">Who I am.</h1>
+                    <p class="text">
+                        Creative designer and developer passionate about crafting beautiful digital experiences. I combine design thinking with technical implementation to deliver solutions that are both visually compelling and functionally sound.
+                    </p>
+                </div>
+                <div class="about-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="skill-badges flex flex-wrap gap-4">
+                            <div class="skill-item">
+                                <img src="./assets/html5-96.png" alt="HTML5" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="./assets/css-96.png" alt="CSS3" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="./assets/js-96.png" alt="JavaScript" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend</h4>
+                        <div class="skill-badges flex flex-wrap gap-4">
+                            <div class="skill-item">
+                                <img src="./assets/java-96.png" alt="Java" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="./assets/csharp-96.png" alt="C#" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">C#</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="./assets/python-96.png" alt="Python" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <div class="skill-badges flex flex-wrap gap-4">
+                            <div class="skill-item">
+                                <img src="./assets/figma-96.png" alt="Figma" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">Figma</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="./assets/sql-96.png" alt="SQL" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <img src="./assets/vsc-96.png" alt="VS Code" class="w-16 h-16 mx-2 hover:scale-150 transition-transform filter hover:drop-shadow-[0_0_14px_#3b82f6]">
+                                <span class="skill-label">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="projects-info">
+                    <h3 class="sub-heading">Portfolio</h3>
+                    <h1 class="heading">Recent Work.</h1>
+                    <p class="text">A collection of recent projects showcasing design and development work. Each piece represents a unique challenge and creative solution.</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge">Featured</span>
+                            <h4>Brand Identity</h4>
+                            <p>Complete visual identity system including logo, color palette, and typography guidelines.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span>Design</span><span>Branding</span><span>Figma</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge">Featured</span>
+                            <h4>Web Interface</h4>
+                            <p>Responsive web design with modern UI components and smooth interactions.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span>Frontend</span><span>React</span><span>Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <span class="project-badge">Case Study</span>
+                            <h4>Mobile App Design</h4>
+                            <p>End-to-end UX design for a mobile application with user research and prototyping.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span>UX/UI</span><span>Mobile</span><span>Prototype</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <form class="contact-form" id="form-contact">
+                    <h3>Let's Work Together</h3>
+                    <input type="text" class="form-input" placeholder="Your Name" id="name-field">
+                    <input type="email" class="form-input" placeholder="Your Email" id="email-field">
+                    <textarea class="form-input" placeholder="Your Message" id="msg-field"></textarea>
+                    <div id="error-field"></div>
+                    <input type="submit" value="Send Message" class="btn">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-contact">
+                    <p><a href="mailto:contact@erich.com">gonzalgo.375216@davao.sti.edu.ph</a></p>
+                </div>
+                <div class="footer-bio">
+                    <h3>Designer & Developer</h3>
+                    <p>Creating digital experiences<br>with passion and precision</p>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/erichjj" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="uil uil-github"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+                        <i class="uil uil-twitter"></i>
+                    </a>
+                    <a href="https://dribbble.com" target="_blank" class="social-link" aria-label="Dribbble">
+                        <i class="uil uil-dribbble"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-brand">
+                <img src="./assets/logo3_inverted.png" alt="Logo" class="footer-logo">
+                <h2>Richlynn<br>Gonzalgo</h2>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2026. All rights reserved.</p>
+            <p>Portfolio | Creative Solutions | 2026</p>
+        </div>
+    </footer>
+
+    <!-- javscript files -->
+    <script src="./resources/script.js"></script>
+
+</body>
+
+</html>
